@@ -1,16 +1,26 @@
 #include <stdio.h>
 
-int main()
 
-{
-	char ch;
+void ft_print_reverse_alphabet(char ch) {
+
+	ch = 'z';
+
+	while(ch >= 'a'){
+
+		printf("%c", ch);	
 	
-	for(ch = 'z'; ch >= 'a'; ch--)
+		ch--;
 
-	{
-		printf("%c", ch);
 	}
 
-	return 0;
+}
 
+int main()
+{
+
+	char ch;
+
+	ft_print_reverse_alphabet(ch);
+
+	return 0;	
 }

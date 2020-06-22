@@ -1,27 +1,27 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
-{
+void ft_putchar(char c){
+
   write (1,&c,1);
 }
 
-void ft_print_comb2(void)
-{
+void ft_print_comb2(void){
+
   int i = 0;
-  while(i<=9)
-    {
+  while(i<=9){
+
       int j = 0;
-      while(j<=7)
-	{
+      while(j<=7){
+
 	  int k = 0;
-	  while(k<=9)
-	    {
+	  while(k<=9){
+		  
 	      int l = 0;
-	      while(l<=9)
-		{
-		  if(j!=l)
-		    {
-		      ft_putchar(i+48);
+	      while(l<=9){
+
+		  if(j != l){
+	
+			  ft_putchar(i+48);
 		      ft_putchar(j+48);
 		      ft_putchar(' ');
 		      ft_putchar(k+48);
@@ -30,18 +30,21 @@ void ft_print_comb2(void)
 		      ft_putchar(' ');
 		    }
 		  l++;
-		}
-	      k++;
-	    }
+	
+	 	  }
+	 	  k++;
+	    
+	  }
 	  j++;
-	}
+	
+	  }
       i++;
-    }
+    
+  }
 }
 
 
-int main()
-{
+int main(){
   ft_print_comb2();
   return 0 ;
 }

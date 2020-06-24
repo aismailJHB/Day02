@@ -6,11 +6,17 @@
 /*   By: aismail <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/24 10:13:04 by aismail           #+#    #+#             */
-/*   Updated: 2020/06/24 10:13:11 by aismail          ###   ########.fr       */
+/*   Updated: 2020/06/24 10:22:57 by aismail          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
+
+void ft_putchar(ch){
+
+	write(1, &ch, 1);
+}
 
 void ft_print_alphabet(char ch) {
 
@@ -18,7 +24,7 @@ void ft_print_alphabet(char ch) {
 
 	while(ch <= 'z'){
 
-		printf("%c", ch);	
+		ft_putchar(ch);	
 	
 		ch++;
 

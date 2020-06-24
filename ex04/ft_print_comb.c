@@ -1,4 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aismail <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/24 10:30:05 by aismail           #+#    #+#             */
+/*   Updated: 2020/06/24 15:15:27 by aismail          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
+#include <unistd.h>
+
+void ft_putchar(int h, int t, int d){
+
+char ch = h + '0', ct = t + '0', cd = d + '0', comma = ',';
+
+	write(1, &ch, 1);
+	write(1, &ct, 1);
+	write(1, &cd, 1);
+	write(1, &comma, 1);
+}
 
 int main(){
 
@@ -20,11 +43,8 @@ int main(){
 			
 				if(h != t && t != d && d != h){
 				
-					printf("%d", h);
-					printf("%d", t);
-					printf("%d", d);
-					printf("%c", ',');
-
+					ft_putchar(h, t, d);
+					
 				}
 
 				d++;
